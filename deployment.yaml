@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: my-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -14,10 +14,10 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: my-app-container
-        image: ramganesh418/sep1
+      - name: awesome_shtern
+        image: ramganesh418/sep1:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -28,6 +28,6 @@ spec:
     app: my-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 5000
+      targetPort: 5000
   type: LoadBalancer
