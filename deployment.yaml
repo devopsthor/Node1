@@ -14,8 +14,8 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: awesome_shtern
-        image: ramganesh418/sep1:latest
+      - name: my-app
+        image: ramganesh418/sep1
         ports:
         - containerPort: 3000
 ---
